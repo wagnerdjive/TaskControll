@@ -1,7 +1,7 @@
-<html>
-<h1> Task Controll API</h1>
 
-<p>
+Task Controll API
+
+
 http://localhost:3000/auth   Method(POST) Criação de conta
 
 {
@@ -79,5 +79,4 @@ http://localhost:3000/tasks Method(GET) para listar todas Task's
 http://localhost:3000/tasks/{id} Method(PUT/PATCH) para update de uma task
 
 http://localhost:3000/tasks/{id} Method(DELETE) para apagar a task
-</p>
-</html>
+
