@@ -1,0 +1,83 @@
+<html>
+<h1> Task Controll API</h1>
+
+<p>
+http://localhost:3000/auth   Method(POST) Criação de conta
+
+{
+    "email":"wagner.mario@gmail.com",
+    "password":"123456789",
+    "password_confirmation":"123456789"
+}
+
+
+http://localhost:3000/auth/sign_in   Method(POST) Login na conta
+
+{
+    "email":"elanga@gmail.com",
+    "password":"123456789"
+}
+
+http://localhost:3000/auth/validate_token  Method(GET) Validar acesso
+Header{
+uid="elanga@gmail.com"
+access-token="QHe1xqa1H5kh3FBAhXwFiw"
+client="vXJk_h2wTXny33fLl_JYtg"
+}
+
+No Body
+
+
+http://localhost:3000/auth/sign_out   Method(DELETE)
+
+
+http://localhost:3000/auth  Method(PUT) - Actualização do nome
+Header{
+uid="elanga@gmail.com"
+access-token="QHe1xqa1H5kh3FBAhXwFiw"
+client="vXJk_h2wTXny33fLl_JYtg"
+}
+
+Body
+{
+    "name": "Wagner Djive",
+    "nickname":"wdjive"
+}
+
+body para troca de password
+
+{
+    "current_password": "123456789",
+    "password": "123456789",
+    "password_confirmation":"123456789"
+}
+
+
+Para resetar password:
+
+http://localhost:3000/auth/password  
+{
+    "email": "elanga@gmail.com"
+}
+
+
+
+//Criar Task
+
+http://localhost:3000/tasks  Method(Post) para criar task
+body
+{
+"title": "Tarefa-2", 
+"legend":"verificar tarefa 2", 
+"due":"2021-09-13 10:28:52.038991"
+}
+
+http://localhost:3000/tasks/{id}  Method(GET) para ver uma determinada task
+
+http://localhost:3000/tasks Method(GET) para listar todas Task's
+
+http://localhost:3000/tasks/{id} Method(PUT/PATCH) para update de uma task
+
+http://localhost:3000/tasks/{id} Method(DELETE) para apagar a task
+</p>
+</html>
